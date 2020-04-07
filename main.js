@@ -1,10 +1,21 @@
-var possibilita= 100;
+var possibilita= 0;
+var difficolta = parseInt(prompt('Scegli difficolta'))
 var listaBombe = [];
 var numeriConsentiti = [];
 var utente = 0;
 var punteggio = 0;
 
+switch (difficolta) {
+  case 0: possibilita = 100
+  break;
+  case 1: possibilita = 80
+  break;
+  case 2: possibilita = 50
 
+    break;
+  default:
+
+}
 
 while (listaBombe.length < 16) {
   var numeroBomba = getRandomNumber(100);
@@ -47,3 +58,4 @@ function controlloNumero(numero) {
 console.log('Lista bombe =', listaBombe)
 console.log('Numeri validi inseriti:', numeriConsentiti)
 console.log('Tentativi riusciti:', punteggio)
+console.log('possibilita', possibilita)
